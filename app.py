@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-# Данные для команд
 resume_data = {
     "about_me": "Hello! My name is [Your Name]. I am a Software Developer.",
     "education": "Education:\n- University of Example, 2024.",
@@ -12,7 +11,6 @@ resume_data = {
     "interests": "Interests:\n- Cybersecurity, AI, Open-Source.",
 }
 
-# Функция для генерации HTML-таблицы с командами
 def display_help():
     help_data = {
         "about_me": "Displays information about me.",
@@ -46,12 +44,10 @@ def display_help():
     html_output += "</table>"
     return html_output
 
-# Маршрут для главной страницы
 @app.route("/")
 def index():
     return render_template("index.html")
 
-# Маршрут для обработки команд
 @app.route("/command", methods=["POST"])
 def command():
     data = request.json
@@ -60,7 +56,7 @@ def command():
     if user_command == "help":
         response = display_help()
     elif user_command == "clear":
-        response = ""  # Очистка экрана на клиенте
+        response = "" 
     else:
         response = resume_data.get(user_command, "Unknown command. Type 'help' to see available commands.")
 
