@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="{{ url_for('static', filename='main.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <main>
+        <aside>
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
+                    <p>About Me</p>
+                </li>
+                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                    <p>Services</p>
+                </li>
+                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                    <p>Gallery</p>
+                </li>
+                <li onclick="Navigate(4)"><i class="fa-solid fa-terminal"></i>
+                    <p>Terminal</p>
+                </li>
+            </ul>
+        </aside>
+        <div class="swiper mySwiper">
+            <div class="SlideContainer swiper-wrapper">
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Hi! I'm <span class="stylized-name">Integrated User</span>,</h1>
+                        <h2>A <span class="proffesions">Full Stack Developer</span></h2>
+                        <p class="heroline">Welcome to my integrated portfolio and interactive terminal experience.</p>
+                        <div class="buttonGroup"><button>Hire Me</button><button>Contact Me</button></div>
+                    </div>
+                </div>
+                <div class="swiper-slide about-us">
+                    <h1>About Me</h1>
+                    <p>I am passionate about creating interactive and functional web applications.</p>
+                </div>
+                <div class="swiper-slide services">
+                    <h1>Services</h1>
+                    <p>Offering full-stack development, UI/UX design, and more.</p>
+                </div>
+                <div class="swiper-slide gallery">
+                    <h1>Gallery</h1>
+                    <p>Explore my recent projects and designs.</p>
+                </div>
+                <div class="swiper-slide contactMe">
+                    <h1>Interactive Terminal</h1>
+                    <div id="terminal-container">
+                        <div id="terminal">
+                            <div id="output"></div>
+                            <div id="input-container">
+                                <span class="prompt">guest@hacker:~$</span>
+                                <input type="text" id="input" autofocus autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
