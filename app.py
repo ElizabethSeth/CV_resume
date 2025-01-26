@@ -7,7 +7,7 @@ resume_data = {
     "education": "Education:\n- Bachelor's Degree in Law\n- Programming School 42\n- Master's Degree in Data Engineering from Microsoft Simplon.",
     "projects": "Projects:\n1. Portfolio Website\n2. Machine Learning Project.",
     "skills": "Skills:\n- Python, Kafka, Airflow, ClickHouse, and other databases\n- Stress resilience\n- Resourcefulness\n- Enthusiastic engagement in projects.",
-    "internships": "Internships:\n- XYZ Corp, Software Intern.",
+    "internships": "Internships:\n- XYZ Corp, Software Intern.\nPernodRicard,DataScientist Aprentice 18 months.",
     "interests": "Interests:\n- Cybersecurity, AI, Open-Source."
 }
 
