@@ -9,7 +9,7 @@ resume_data = {
     "skills": "Skills:\n- Python, Kafka, Airflow, ClickHouse, PostgresSQL, MySQL Azure GCP Kubernetis\n- Stress resilience\n- Resourcefulness\n- Enthusiastic engagement in projects.",
     "internships": "Internships:\n- XYZ Corp, Software Intern.\nPernodRicard,DataScientist Aprentice 18 months.",
     "interests": "Interests:\n- Cybersecurity, AI, Open-Source."
-    "Languages": "Languages:\n- English, French, Russian, Spanish."
+    "Languages" : "Languages:\n- English, French, Russian, Spanish."
 }
 
 
@@ -21,6 +21,7 @@ def display_help():
         "skills": "Lists my technical and soft skills.",
         "internships": "Shows my internship experience.",
         "interests": "Shows my personal interests.",
+        "Languages" : "Shows my languages skills.",
         "clear": "Clears the terminal screen.",
         "help": "Displays this help message.",
         "exit": "Exits the terminal."
