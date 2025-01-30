@@ -8,8 +8,8 @@ resume_data = {
     "projects": "Projects:\n1. Portfolio Website\n2. Machine Learning Projects , Excel Automation, Data Engineering Projects ",
     "skills": "Skills:\n- Python, Kafka, Airflow, ClickHouse, PostgresSQL, MySQL Azure GCP Kubernetis\n- Stress resilience\n- Resourcefulness\n- Enthusiastic engagement in projects.",
     "internships": "Internships:\n- XYZ Corp, Software Intern.\nPernodRicard,DataScientist Aprentice 18 months.",
-    "interests": "Interests:\n- Cybersecurity, AI, Open-Source."
-    "Languages" : "Languages:\n- English, French, Russian, Ukrainian, Spanish
+    "interests": "Interests:\n- Cybersecurity, AI, Open-Source.",
+    "Languages" : "Languages:\n- English, French, Russian, Ukrainian, Spanish"
 }
 
 
