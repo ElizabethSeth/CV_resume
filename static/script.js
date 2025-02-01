@@ -1,7 +1,6 @@
 const outputElement = document.getElementById("output");
 const inputElement = document.getElementById("input");
 
-// Функция для имитации печатной машинки
 async function typeText(element, text, speed = 50) {
   return new Promise((resolve) => {
     let i = 0;
@@ -18,28 +17,25 @@ async function typeText(element, text, speed = 50) {
   });
 }
 
-// Функция для отправки команд на сервер и обработки ответа
 async function processCommand(command) {
-  appendOutput(`guest@hacker:~$ ${command}`); // Отображаем введённую команду
+  appendOutput(`guest@hacker:~$ ${command}`);
 
   if (command === "clear") {
-    outputElement.innerHTML = ""; // Очистка экрана
+    outputElement.innerHTML = ""; 
     return;
   }
 
   try {
-    // Отправляем команду на сервер Flask
     const response = await fetch("/command", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ command }),
     });
 
-    const data = await response.json(); // Получаем JSON-ответ от сервера
+    const data = await response.json(); 
 
-    // Создаём новый элемент для вывода ответа
     const newLine = document.createElement("div");
-    newLine.innerHTML = data.response; // Вставляем HTML вместо текста
+    newLine.innerHTML = data.response; 
     outputElement.appendChild(newLine);
 
     outputElement.scrollTop = outputElement.scrollHeight;
@@ -49,7 +45,6 @@ async function processCommand(command) {
   }
 }
 
-// Функция для добавления вывода в терминал
 function appendOutput(text) {
   const newLine = document.createElement("div");
   newLine.textContent = text;
@@ -57,18 +52,16 @@ function appendOutput(text) {
   outputElement.scrollTop = outputElement.scrollHeight;
 }
 
-// Обработчик ввода команд
 inputElement.addEventListener("keydown", async (event) => {
   if (event.key === "Enter") {
-    const command = inputElement.value.trim(); // Получаем введённую команду
+    const command = inputElement.value.trim(); 
     if (command) {
-      await processCommand(command); // Обрабатываем команду
+      await processCommand(command);
     }
-    inputElement.value = ""; // Очищаем поле ввода
+    inputElement.value = ""; 
   }
 });
 
-// Загрузка системы при запуске страницы
 (async function showLoadingSequence() {
   const loadingMessages = [
     "Initializing system...",
@@ -80,6 +73,6 @@ inputElement.addEventListener("keydown", async (event) => {
   for (const message of loadingMessages) {
     const line = document.createElement("div");
     outputElement.appendChild(line);
-    await typeText(line, message, 50); // Анимация печатной машинки
+    await typeText(line, message, 50); 
   }
 })();
