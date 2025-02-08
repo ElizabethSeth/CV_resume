@@ -1,0 +1,4 @@
+CH_HOST="34.60.92.224"
+CH_PORT="8123"
+CH_USER="admin"
+CH_PASSWORD="island"
